@@ -1,4 +1,4 @@
-[![YK logo](taskmanager/static/img/yodaKode-sml.png)](https://github.com/roeszler) 
+[![YK logo](unittest-walkthrough/static/pics/yodaKode-sml.png)](https://github.com/roeszler) 
 
 Welcome Stuart Roeszler,
 
