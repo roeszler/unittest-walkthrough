@@ -10,108 +10,108 @@ def even_number_of_evens(numbers):
     # return True
 
 
-# ------------ Pre Refactor 
+# # ------------ Pre Refactor 
 
-    if isinstance(numbers, list):
-        """
-        Checks if the value passed in is a list,
-        If the two numbers passed in are even and
-        Return True if the number of evens is even, and False if it's not.
-        """
-        return True
-        if numbers == []: # check for an empty list
-            return False
-        else:
-            # return True
-            noOfEvens = 0 # initialize a variable 'noOfEvens' to say that we currently have zero evens
+#     if isinstance(numbers, list):
+#         """
+#         Checks if the value passed in is a list,
+#         If the two numbers passed in are even and
+#         Return True if the number of evens is even, and False if it's not.
+#         """
+#         return True
+#         if numbers == []: # check for an empty list
+#             return False
+#         else:
+#             # return True
+#             noOfEvens = 0 # initialize a variable 'noOfEvens' to say that we currently have zero evens
 
-        for n in numbers:
-            if n % 2 == 0:
-                noOfEvens += 1
+#         for n in numbers:
+#             if n % 2 == 0:
+#                 noOfEvens += 1
         
-        if noOfEvens:
-            return noOfEvens % 2 == 0
-        else:
-            return False
+#         if noOfEvens:
+#             return noOfEvens % 2 == 0
+#         else:
+#             return False
 
-    else:
-        raise TypeError("A list was not passed into the function")
+#     else:
+#         raise TypeError("A list was not passed into the function")
 
 
-# ------------ Refactor 1 ------------
+# # ------------ Refactor 1 ------------
 
-    if isinstance(numbers, list):
-        noOfEvens = 0 # initialize a variable 'noOfEvens' to say that we currently have zero evens.
+#     if isinstance(numbers, list):
+#         noOfEvens = 0 # initialize a variable 'noOfEvens' to say that we currently have zero evens.
 
-        for n in numbers:
-            if n % 2 == 0:
-                noOfEvens += 1
+#         for n in numbers:
+#             if n % 2 == 0:
+#                 noOfEvens += 1
         
-        if noOfEvens:
-            return noOfEvens % 2 == 0
-        else:
-            return False
+#         if noOfEvens:
+#             return noOfEvens % 2 == 0
+#         else:
+#             return False
 
-    else:
-        raise TypeError("A list was not passed into the function")
+#     else:
+#         raise TypeError("A list was not passed into the function")
 
 
-# ------------ Refactor 2 ------------
+# # ------------ Refactor 2 ------------
 
-    if isinstance(numbers, list):
-        noOfEvens = 0 # initialize a variable 'noOfEvens' to say that we currently have zero evens.
+#     if isinstance(numbers, list):
+#         noOfEvens = 0 # initialize a variable 'noOfEvens' to say that we currently have zero evens.
 
-        # List comprehension: return a value of 1 each time a number (that is
-        # evenly divisible by 2) appears in the numbers list, then sum() these values
-        # ie how many times an even number appears in the list : 
-        print(sum([1 for n in numbers if n % 2 == 0]))
+#         # List comprehension: return a value of 1 each time a number (that is
+#         # evenly divisible by 2) appears in the numbers list, then sum() these values
+#         # ie how many times an even number appears in the list : 
+#         print(sum([1 for n in numbers if n % 2 == 0]))
 
-        # for n in numbers:
-        #     if n % 2 == 0:
-        #         noOfEvens += 1
+#         # for n in numbers:
+#         #     if n % 2 == 0:
+#         #         noOfEvens += 1
         
-        if noOfEvens:
-            return noOfEvens % 2 == 0
-        else:
-            return False
+#         if noOfEvens:
+#             return noOfEvens % 2 == 0
+#         else:
+#             return False
 
-    else:
-        raise TypeError("A list was not passed into the function")
+#     else:
+#         raise TypeError("A list was not passed into the function")
 
 
 
-# ------------ Refactor 3 ------------
+# # ------------ Refactor 3 ------------
 
-    if isinstance(numbers, list):
-        noOfEvens = sum([1 for n in numbers if n % 2 == 0])
-        # print(noOfEvens)
+#     if isinstance(numbers, list):
+#         noOfEvens = sum([1 for n in numbers if n % 2 == 0])
+#         # print(noOfEvens)
         
-        if noOfEvens:
-            return noOfEvens % 2 == 0
-        else:
-            return False
+#         if noOfEvens:
+#             return noOfEvens % 2 == 0
+#         else:
+#             return False
 
-    else:
-        raise TypeError("A list was not passed into the function")
+#     else:
+#         raise TypeError("A list was not passed into the function")
 
 
-# ------------ Refactor 4 ------------
+# # ------------ Refactor 4 ------------
 
-    if isinstance(numbers, list):
-        noOfEvens = sum([1 for n in numbers if n % 2 == 0])
+#     if isinstance(numbers, list):
+#         noOfEvens = sum([1 for n in numbers if n % 2 == 0])
 
-        # First we check if noOfEvens is not 0, using the 'truthy' check to do that:
-        # truthy value is a value that is considered true when encountered in a Boolean context.
-        # Second, noOfEvens % 2 == 0, so lets add that as well
-        return True if noOfEvens and noOfEvens % 2 == 0 else False
+#         # First we check if noOfEvens is not 0, using the 'truthy' check to do that:
+#         # truthy value is a value that is considered true when encountered in a Boolean context.
+#         # Second, noOfEvens % 2 == 0, so lets add that as well
+#         return True if noOfEvens and noOfEvens % 2 == 0 else False
 
-        # if noOfEvens:
-        #     return noOfEvens % 2 == 0
-        # else:
-        #     return False
+#         # if noOfEvens:
+#         #     return noOfEvens % 2 == 0
+#         # else:
+#         #     return False
 
-    else:
-        raise TypeError("A list was not passed into the function")
+#     else:
+#         raise TypeError("A list was not passed into the function")
 
 
 # ------------ Refactor 5 ------------
